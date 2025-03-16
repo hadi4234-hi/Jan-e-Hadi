@@ -20,9 +20,9 @@ function QuizApp() {
 
     const handleAnswer = (option) => {
         if (option === questions[currentQuestion].answer) {
-            setFeedback("Correct! ??");
+            setFeedback("✅ Correct! 🎉");
         } else {
-            setFeedback("Oops! ?");
+            setFeedback("❌ Oops! Try again. 😅");
         }
 
         setTimeout(() => {
@@ -48,10 +48,11 @@ function QuizApp() {
                     <p>{feedback}</p>
                 </div>
             ) : (
-                <h2>Quiz Completed! ??</h2>
+                <h2>🎉 Quiz Completed! 🎊</h2>
             )}
         </div>
     );
 }
 
+// Ensure ReactDOM is used properly
 ReactDOM.createRoot(document.getElementById("root")).render(<QuizApp />);
